@@ -504,11 +504,11 @@ layout: true
 ---
 name:cnn-rnn
 
-- CNN learns to identify patterns across space and RNN is trained to learn the pattern across time or sequence. 
+- The CNN identifies patterns across space while the RNN is trained to learn the pattern across time or word/sentence sequence. 
 
-- The labeled trained data is classified by multiple combination of salient text features such as 軍公教 (military, teachers, public servant, farmer), 補助款 (grant and subsidy).
+- The data set for training the model was classified by multiple combination of salient text features such as 軍公教 (military, teachers, public servant, farmer) or 補助款 (grant and subsidy).
 
-- Fixed format and standard written style in official document 
+- Fixed format and standard written style in official documents. 
 
 - We don't want the model to learn too much information from the text.
 
