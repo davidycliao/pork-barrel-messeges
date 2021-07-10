@@ -242,26 +242,160 @@ layout: true
 
 
 ---
-layout: true
-# Additionals
----
-name:additionals
-
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-
-- PorkCNN: A Small Project for Pork Barrel Legislation Classification Using Convolutional Neural Networks (https://github.com/davidycliao/PorkCNN)
-
-- legisCrawler: An Automation Webcrawling Toolkit for Retrieving Taiwan Parliamentary Questions (https://github.com/davidycliao/legisCrawler)
-
-
-
----
 layout: false
 class: inverse, center, middle
 
 # Thank You
+
+
+
+
+---
+layout: true
+# Appendix
+---
+name:additionals
+
+### Model Performance  
+.smaller[[Model Performance Ⅰ](#model-performance-01)] | .smaller[[Model Performance ⅠⅠ](#model-performance-02)] | .smaller[[Model Performance ⅠⅠⅠ](#model-performance-03)] | .smaller[[Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars)] 
+
+### Data
+.smaller[[Non-Pork Featured Questions ](#sampled-non-pork)] | .smaller[[Pork Featured Questions](#sampled-pork)] | .smaller[[Why CNN Not RNN](#cnn-rnn)]
+
+
+
+### miscellaneous
+- .smaller[PorkCNN: A Small Project for Pork Barrel Legislation Classification Using Convolutional Neural Networks (https://github.com/davidycliao/PorkCNN)]
+
+- .smaller[legisCrawler: An Automation Webcrawling Toolkit for Retrieving Taiwan Parliamentary Questions (https://github.com/davidycliao/legisCrawler)]
+
+
+
+---
+layout: true
+# Model Performance Ⅰ
+---
+name:model-performance-01
+
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+
+
+|              | precision  |   recall   |  f1-score  |   support  |
+|--------------|:----------:|:----------:|:----------:|:----------:|
+|       0      |    0.95    |    0.97    |    0.96    |    1566    |
+|       1      |    0.94    |    0.91    |    0.92    |     825    |
+| accuracy     |            |            |    0.95    |    2391    |
+| macro avg    |    0.95    |    0.94    |    0.94    |    2391    |
+| weighted avg |    0.95    |    0.95    |    0.95    |    2391    |
+
+
+---
+layout: true
+# Model Performance ⅠⅠ
+---
+name:model-performance-02
+
+&amp;nbsp;
+&amp;nbsp;
+
+
+|                      |  Prediction: Not Pork (0)  |   Prediction: Pork (1)   | 
+|----------------------|:--------------------------:|:------------------------:|
+| Acutal: Not Pork (0) |           1520             |            46            |
+| Acutal:    Pork  (1) |             76             |           749            |
+
+
+
+---
+layout: true
+# Model Performance ⅠⅠⅠ
+---
+name:model-performance-03
+
+
+&amp;nbsp;
+
+## Evaluating the Model on Test Set
+| Train Set                                                                               |
+|:----------------------------------------------------------------------------------------|
+| 22/22 [==============================] - 48s 2s/step - loss: 0.0428 - accuracy: 0.9864  |
+| - val_loss: 0.1744 - val_accuracy: 0.9423                                               | 
+
+- We quickly reach an accuracy of 0.9864 (98.6%) on the training data at 8th epoch
+
+
+
+|Test Set                                                                                 |
+|:----------------------------------------------------------------------------------------|
+|11/11 [==============================] - 5s 453ms/step - loss: 0.1744 - accuracy: 0.9423 |
+|[0.17435400187969208, 0.942283570766449]                                                 |
+
+- The test-set accuracy turns out to be 94.2%. 
+- It is a bit lower than the training set accuracy (0.9864%). Slightly overfitting on training set.
+
+
+---
+layout: true
+# Pork Featured Questions 
+---
+name:sampled-pork
+ 
+&amp;nbsp;
+&amp;nbsp;
+
+| Legislator |       Questions         |                  Topics                      |                        Keywords                      |
+|:----------:|:------------------------|----------------------------------------------|------------------------------------------------------|
+| 陳啟昱	   |鑑於現行《所得稅法》第十.| Income tax; education expenses; deductions   | Special Deductions; Educational Expenditure          |
+| 彭添富	   |針對「辦理九十四年原住民 | Aboriginal life                              |	housing subsidies                                    |
+| 李復興	   |發現自九十三年一月間起   | Old-age benefits; labor retirement           |	Retired employees allowance for the elderly          |
+| 盧秀燕	   |針對早期退除役軍官給與補 | Veterans welfare                             |	Grants for early retired officers                    |
+| 丁守中	   |針就民眾陳情指出，目前政 | Welfare for the handicapped                  |	Living allowance                                     |
+| 馮定國	   |鑒於國內經濟結構的快速   | Elderly welfare                              |	Aging; middle and old age unemployment               |
+| 彭添富	   |針對「豪雨成災，         | Agricultural subsidies                       |	Heavy rain; crops                                    |
+| 曾華德	   |為民國38年至43年間戌     | Military pay                                 |	Anti-Communist Salvation Army Reimbursement of Salary|
+
+
+---
+layout: true
+# Non-Pork Featured Questions 
+---
+name:sampled-non-pork
+
+&amp;nbsp;
+&amp;nbsp;
+
+
+| Legislator |       Questions         |                  Topics                      |                        Keywords                      |
+|:----------:|:------------------------|----------------------------------------------|------------------------------------------------------|
+| 李復甸	   |鑑於刑事偵察實務上緩起   |Investigation; litigation procedure           |	Criminal investigation; secret witness               |
+| 林建榮	   |為立法院朝野協商修改銀   |Financial management; bank management         |	Banking Law; Cash Card; Revolving Interest Rate      |
+| 林正峰	   |針對行政院長張俊雄日前   |Energy policy                                 |	Energy saving                                        |
+| 林正峰	   |鑑於近年來臺灣地區毒品   |Tobacco Restriction; Hospital                 |	Drug Abuse; Departmental Hospital                    |
+| 王幸男	   |針對道路人孔蓋或管線挖   |Public safety                                 |	Manhole cover; public safety; road quality           |
+| 管碧玲	   |針對近日台灣鐵路管理局	 |Railway management; ticket	                  | Online booking; monopoly; Taiwan Railway             |
+| 黃敏惠	   |就近日來爆發知名提神飲   |Drinks; Poisoning                             |	Drinks; Poisoning                                    |
+| 陳朝龍	   |針對英國政府宣稱台灣出   |Infectious disease prevention and control     |	British Government; Taiwanese birds; Avian Influenza |
+
+
+---
+layout: true
+# Why CNN Not RNN
+---
+name:cnn-rnn
+
+- CNN learns to identify patterns across space and RNN is trained to learn the pattern across time. 
+
+- The labeled trained data is classified by multiple combination of salient text features such as 軍公教 (military, teachers, public servant, farmer), 補助款 (grant and subsidy).
+
+- Fixed format and standard written style in official document 
+
+- We don't want the model to learn too much information from the text.
+
+&lt;img src="./images/billeg.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
