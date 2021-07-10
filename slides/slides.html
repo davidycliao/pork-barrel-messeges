@@ -48,7 +48,7 @@ name:questions
  
 --
 
- 2. Does the switch of electoral system from the SNTV to the SMDs reduce legislators' incentives to cultivate a personal reputation by paying less attention to distributive (pork barrel) policies?
+ 2. Does the switch of electoral system from the SNTV to the SMDs (single member districts) reduce legislators' incentives to cultivate a personal reputation by paying less attention to distributive (pork barrel) policies?
  
 --
 
@@ -182,6 +182,8 @@ name:performance
  
 - The mean training loss and accuracy measured over each epochs, and the validation loss and accuracy measured at the end of each.
 
+- [Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars)
+
 &lt;img src="./images/learning_curves.png" width="65%" style="display: block; margin: auto;" /&gt;
 
 ---
@@ -224,7 +226,7 @@ name:parliarmentary-questions
 
 ---
 layout: true
-# Consideration
+# Takeaway
 ---
 
 &amp;nbsp;
@@ -255,6 +257,9 @@ layout: true
 # Appendix
 ---
 name:additionals
+
+&amp;nbsp;
+
 
 ### Model Performance  
 .smaller[[Model Performance Ⅰ](#model-performance-01)] | .smaller[[Model Performance ⅠⅠ](#model-performance-02)] | .smaller[[Model Performance ⅠⅠⅠ](#model-performance-03)] | .smaller[[Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars)] 
@@ -317,7 +322,6 @@ name:model-performance-03
 
 &amp;nbsp;
 
-## Evaluating the Model on Test Set
 | Train Set                                                                               |
 |:----------------------------------------------------------------------------------------|
 | 22/22 [==============================] - 48s 2s/step - loss: 0.0428 - accuracy: 0.9864  |
@@ -385,7 +389,7 @@ layout: true
 ---
 name:cnn-rnn
 
-- CNN learns to identify patterns across space and RNN is trained to learn the pattern across time. 
+- CNN learns to identify patterns across space and RNN is trained to learn the pattern across time or sequence. 
 
 - The labeled trained data is classified by multiple combination of salient text features such as 軍公教 (military, teachers, public servant, farmer), 補助款 (grant and subsidy).
 
