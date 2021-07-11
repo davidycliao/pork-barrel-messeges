@@ -80,7 +80,7 @@ options(device = function(file, width, height) {
 })
 options(knitr.table.format = "html")
 
-# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/Electoral-Incentives-and-Porks/slides/slides.html#1", verbose = FALSE)
+# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/elp/slides/slides.html#1", verbose = FALSE)
 
 
 ```
@@ -245,7 +245,7 @@ name:performance
  
 - The mean training loss and accuracy measured over each epochs, and the validation loss and accuracy measured at the end of each.
 
-- [Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars)
+- Show all learning curve history until 80 epochs (see, [Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars))
 
 ```{r echo = F, out.width = "65%"}
 knitr::include_graphics("./images/learning_curves.png")
@@ -255,11 +255,11 @@ knitr::include_graphics("./images/learning_curves.png")
 layout: true
 # Parliarmentary Questions  
 ---
-name:parliarmentary-questions  
+name:parliamentary-questions  
 
 &nbsp;
 
-- For exploration of parliarmentary questions, I have web scraped the parliamentary questions and the speeches from The Website of Taiwan Legislative Yuan from 1994 to 2020, including categories of information with regards to the topic, keywords and the type.
+- For exploration of parliarmentary questions, I have web scraped the parliamentary questions and the speeches from The Website of Taiwan Legislative Yuan from 1993 to 2020, including categories of information with regards to the topic, keywords and the type.
  
 ```{r echo = F, out.width = "50%"}
 knitr::include_graphics("./images/image3.png")
@@ -366,25 +366,23 @@ class: inverse, center, middle
 
 
 
-
 ---
 layout: true
 # Appendix
 ---
-name:additionals
+name:appendix
 
 &nbsp;
-
 
 ### Model Performance  
 .smaller[[Model Performance Ⅰ](#model-performance-01)] | .smaller[[Model Performance ⅠⅠ](#model-performance-02)] | .smaller[[Model Performance ⅠⅠⅠ](#model-performance-03)] | .smaller[[Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars)] 
 
 ### Data
-.smaller[[Non-Pork Featured Questions ](#sampled-non-pork)] | .smaller[[Pork Featured Questions](#sampled-pork)] | .smaller[[Why CNN Not RNN](#cnn-rnn)]
+.smaller[[Sampled Non-Pork Featured Questions ](#sampled-non-pork)] | .smaller[[Sampled Pork Featured Questions](#sampled-pork)] | .smaller[[Why CNN Not RNN](#cnn-rnn)]
 
 
 
-### miscellaneous
+### Miscellaneous
 - .smaller[PorkCNN: A Small Project for Pork Barrel Legislation Classification Using Convolutional Neural Networks (https://github.com/davidycliao/PorkCNN)]
 
 - .smaller[legisCrawler: An Automation Webcrawling Toolkit for Retrieving Taiwan Parliamentary Questions (https://github.com/davidycliao/legisCrawler)]
