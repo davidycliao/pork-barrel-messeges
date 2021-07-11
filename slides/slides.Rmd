@@ -175,7 +175,7 @@ name:literature
 
 --
 
-- Given this the SNTV system, candidates were competing with competitors from not only opponent parties, but the same party as well. As results, candidates were incentivized to attract votes by giving out more distributive benefits to their own constituency, rather than nation-wide.
+- Given this the SNTV system, candidates were competing with competitors from not only opponent parties, but the same party as well. As results, candidates were incentivized to attract votes by .hi-grey[giving out more distributive benefits] to their own constituency, rather than nation-wide.
 
 --
 
@@ -200,9 +200,9 @@ knitr::include_graphics("./images/diagram.png")
 
 ---
 
-### Labeld Pork-barrel Legislation
+### Labeld Pork-barrel Legislation for Training the Model
 
-- They have created .hi-grey[hand-labelled legislation] by reading the purpose of statute, devoted either to promoting the pork-barrel project (earmarked projects) in a district or cultivating favored specific population groups by providing subsidies such as agriculture allowance to the farmers ( Luor and Hsieh 2008; Luor and Liao 2009; Luor and Chan 2012).
+- They have created .hi-grey[hand-labelled legislation] by reading the purpose of statute, devoted either to promoting the pork-barrel project (earmarked projects) in .hi-grey[a district] or cultivating favored .hi-grey[specific population groups] by providing subsidies such as agriculture allowance to the farmers ( Luor and Hsieh 2008; Luor and Liao 2009; Luor and Chan 2012).
 
  
 ```{r echo = F, out.width = "40%"}
@@ -227,14 +227,13 @@ layout: true
 name:cnn-model
 
 ###  Model and Building
-
 - The implementation of the CNN is similar to that described by .grey[[Kim (2014)](https://aclanthology.org/D14-1181/)], except that this paper does not apply word embedding model for tokenization. 
 
-```{r echo = F, out.width = "55%"}
+```{r echo = F, out.width = "45%"}
 knitr::include_graphics("./images/cnn.png")
 ```
 
-
+- The actual graph in [Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#graphs&run=20210709-125209%2Ftrain). 
 ---
 layout: true
 # Performance 
@@ -346,7 +345,7 @@ layout: true
 
 &nbsp;
 
-- In this paper, I aim to incorporate this application to classify the parliamentary questions and evaluate the hypothesis by looking at how electoral reform reduces legislator’s incentive to deliver pork barrel projects. 
+- In this paper, I aim to incorporate this application to .hi-grey[classify the parliamentary questions] and evaluate the hypothesis by looking at how electoral reform reduces legislator’s incentive to deliver pork barrel projects. 
 
 --
 
@@ -354,7 +353,7 @@ layout: true
 
 --
 
-- In next step, I plan to conduct an in-depth text analysis to compare the variation of topic categories across time and evaluate pork barrel programs in the context of Taiwan politics.
+- In next step, I plan to conduct an in-depth text analysis to .hi-grey[compare the variation of topic categories across time] and evaluate pork barrel programs in the context of Taiwan politics.
 
 
 
@@ -371,8 +370,6 @@ layout: true
 # Appendix
 ---
 name:appendix
-
-&nbsp;
 
 ### Model Performance  
 .smaller[[Model Performance Ⅰ](#model-performance-01)] | .smaller[[Model Performance ⅠⅠ](#model-performance-02)] | .smaller[[Model Performance ⅠⅠⅠ](#model-performance-03)] | .smaller[[Tensorboard](https://tensorboard.dev/experiment/D82LowP3TWGwWiL0NYcXLA/#scalars)] 
