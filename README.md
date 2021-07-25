@@ -10,3 +10,6 @@
 
 
 **Documents:** [`HTML`](https://raw.githack.com/davidycliao/elp/main/slides/slides.html#1) | [`Slides`](https://raw.githack.com/davidycliao/elp/main/slides/slides.pdf) | [`Abstracts`](https://raw.githack.com/davidycliao/elp/main/paper/abstract.pdf)
+
+
+**Presentation:** [`2021 Machine Learning Summer School`](http://ai.ntu.edu.tw/mlss2021/) | [`2021 Latin America PolMeth`](https://docs.google.com/document/d/1IVoHIswSK_iGrF0i71uvQWWBm_rNmKH1qZH-FXxY4KQ/edit) 
