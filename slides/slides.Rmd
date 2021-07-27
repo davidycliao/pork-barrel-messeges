@@ -4,7 +4,7 @@ subtitle: ".smallest.hi-slate[Exploring Parliamentary Questions Using Convolutio
 author:
   - David Yen-Chieh Liao
   - .smallest[PhD Student at Department of Government | University of Essex]
-  - .smallest[Paper III / PhD Dissertation Project in Progress]
+  - .smallest[The Machine Learning Summer School 2021 (MLSS)]
   
 #date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
