@@ -201,7 +201,6 @@ layout: true
 ---
 name:questions
 
-&nbsp;
 
 - The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
@@ -211,7 +210,7 @@ name:questions
 
 --
 
-```{r echo = F, out.width = "20%"}
+```{r echo = F, out.width = "40%", fig.cap="Source : https://www.xoer.cc/3461616"}
 knitr::include_graphics("./images/brawl.png")
 ```
 
@@ -296,7 +295,7 @@ name:research-design
 
 - Train a deep learning model to measure pork-barrel features on parliamentary questions over time. 
 
-```{r echo = F, out.width = "25%"}
+```{r echo = F, out.width = "35%"}
 knitr::include_graphics("./images/diagram.png")
 ```
 --
@@ -601,6 +600,6 @@ name:appendix
 
 
 ```{r eval=FALSE, include=FALSE}
-pagedown::chrome_print("", verbose = FALSE)
+pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/elp/slides/slides.html#1", verbose = FALSE)
 ```
 
