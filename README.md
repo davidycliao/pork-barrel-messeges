@@ -14,11 +14,10 @@ Measuring legislator behaviours and tendencies towards constituencies under diff
 
 **Keywords**：*electoral reform, single-member districts (SMDs), pork barrel, BERT, parliamentary questions, SNTV*
 
-**Documents**:  [`slides`](https://raw.githack.com/davidycliao/erpb/master/slides/slides.html)
+**Documents**:  [`slides`](https://raw.githack.com/davidycliao/erpb/master/slides/slides.html) |  [`slides`](https://raw.githack.com/davidycliao/erpb/master/paper/paper.pdf)
  
 
 </div>
-
 
 
 <br />
@@ -27,7 +26,7 @@ Measuring legislator behaviours and tendencies towards constituencies under diff
 
 ## Acknowledge 
 
-- I appreciate the assistance in providing these valuable dataset. We also gratefully acknowledge the use of the High Performance Computing Facility (CERES) and its associated support services at [The University of Essex](https://www.essex.ac.uk/student/it-services/high-performance-computing-(hpc)) in the completion of this work.
+- I gratefully acknowledge using Prof. Dr Ching Jyuhn Luor's collection of digitized pork-barrel legislation and the High Performance Computing Facility (CERES) at [The University of Essex](https://www.essex.ac.uk/student/it-services/high-performance-computing-(hpc)). 
 
 - The dissertation project is supported by the 2021 Taiwanese Overseas Pioneers Grants for PhD Candidates from *Ministry of Science and Technology Taiwan* and  *National Applied Research Laboratories*, August 2021 - August 2022.
 
