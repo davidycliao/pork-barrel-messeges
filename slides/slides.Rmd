@@ -115,19 +115,11 @@ name:questions
 
 - Measuring legislator behaviours and tendencies towards constituencies under different electoral systems is important.
 
---
-
-- In this paper, I quantitatively investigate legislators’ pork-barrel behavior on .hi-grey[parliamentary questions] using the case of Taiwan Legislative Yuan. 
-
---
+- This paper quantitatively investigates this topic using the case of Taiwan Legislative Yuan and data on written parliamentary questions through an electoral reform from _multi-member districts (MMD)_ to _single-member districts (SMD)_. 
 
 - Research Questions:
 
---
-
  1. Are the legislators in insingle non-transferable vote system (SNTV) more likely to ask more about .hi-grey[the provision of particularistic goods] in the parliamentary questions?
- 
---
 
  2. Dose the reform change legislators' electoral strategies and behaviours?
  
@@ -140,17 +132,13 @@ name:questions
 
 &nbsp;
 
-- Parliamentary activities such as .hi-grey[debates] (**Parspeech V2**) and .hi-grey[parliamentary questions] play a significant role in most parliamentary democracies. 
-
---
+- Legislaive activities such as .hi-grey[legislative votings],  .hi-grey[debates] (**e.g, Parspeech V2**) and .hi-grey[parliamentary questions] play a significant role in most democracies. 
 
 - The advantages for focusing on parliamentary questions:
 
---
 
  1. The party leadership have less control over MP's motivation to employ parliamentary questions (Judge 1974, Shane 2011).
- 
---
+
 
  2. Parliamentary questions may reveal MPs' interests in policy preference (Shane 2011).
  
@@ -163,19 +151,11 @@ name:questions
 
 - MPs ask questions for several reasons.
 
---
-
   1. Because of their .hi-grey[expertise] or domain responsibility of delegation for question topics.
-  
---
 
   2. personal preference such as their nature of .hi-grey[substantive representation] (Russo 2021; Saalfeld 2011; Martin 2011)
   
---
-
   3. electoral motivation: .hi-grey[personal reputation] (Martin 2011)
-
---
 
   4. electoral rule and systems.
   
@@ -186,77 +166,41 @@ name:questions
 
 - In this paper, I introduce the case of .hi-grey[Taiwan Legislative Yuan], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems. 
 
---
 
 - In particular, parliamentary questions are the primary channel for legislators to .hi-grey[scrutinize the government] and .hi-grey[express political intentions]. 
-
---
 
 
 - These parliamentary questions allow identification of different .hi-grey[question topics], .hi-grey[categories] and .hi-grey[further information] regarding .hi-grey[legislators' opinions of policy interests] and agenda at the individual level.
 
 ---
 layout: true
-# Background
+# Background & Literature
 ---
 name:questions
+
+&nbsp;
 
 
 - The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
---
-
-- This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation. 
-
---
-
-```{r echo = F, out.width = "40%", fig.cap="Source : https://www.xoer.cc/3461616"}
-knitr::include_graphics("./images/brawl.png")
-```
-
---
+- This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
 
 - The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] (Cox 1990; Hirano 2006; Ames 2001), as well as .hi-grey[encouraging factional and candidate-centered electoral politics] (e.g. Batto and Huang 2016; Wu 2003). 
 
 
 ---
-layout: true
-# The Literature: Personal Votes
----
-name:literature
 
 &nbsp;
 
-- The electoral system such as SNTV-MMD, which combines plurality rule with a single vote per voter and a district magnitude larger than one, was believed to .hi-grey[increase intra-party (centrifugal) competition] (Cox 1990; Carey and Shugart 1995).
+- Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] (Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995).
 
---
+- Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
 
-- Under the SNTV-MMD, parties or party leaders have incentive to nominate more than one candidate to run in each district, which required their .hi-grey[candidates to compete against each other]. 
+- Hypothesis:
 
---
+  __1. Under SNTV-MMD, legislators are more likely to propose the questions regarding the provision of particularistic goods.__
 
-- Therefore, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via providing paricularistic services as called “personal vote” (Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995).
-
----
-layout: true
-# The Literature: Pork Barrel Politics
----
-name:literature
-
-- An examination of the relationship between electoral systems and the “pork-barrel” phenomenon is being investigated in light of the explosion of interest in the past decade in .hi-grey[the effects of different electoral systems] on policy outputs (e.g., Hirano 2005; Samuels 2002; Stratmann and Baur 2002; Lancaster and Patterson 1990; Lancaster 1986). 
-
---
-
-- The literature focusing on Taiwan distributive politics has investigated the effects of the electoral reform that .hi-grey[decreases legislators' incentive to bring home the bacon].
-
---
-
-- For example, Sheng (2014a) and Sheng (2014b) investigate the impacts of electoral reform on changes of bill sponsorship with regards to particularistic goods among legislators. Luor and Hsieh (2008) and Luor and Liao (2009) focus on the impact of district magnitude on legislators’ incentive to propose pork barrel-related bills. 
-
---
-
-- In similar, Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
-
+  __1. Under SMD-MMM, legislators are more like to ask the questions related to programmatic and regulatory policies__
 
 ---
 layout: true
@@ -264,7 +208,7 @@ layout: true
 ---
 name:parliamentary-questions  
 
-- In order to analyze parliamentary questions, I have webscraped the parliamentary questions from the official website of Taiwan Legislative Yuan from 1993 to 2020, including the relevant information about the classified topics, selected keywords and the corresponding question type.
+- In order to analyze parliamentary questions, I have webscraped the parliamentary questions from the official website of Taiwan Legislative Yuan from 1993 to 2020, including the relevant information about _the classified topics_, _selected keywords_ and the corresponding _question type_.
  
 ```{r echo = F, out.width = "55%"}
 knitr::include_graphics("./images/image3.png")
@@ -287,29 +231,20 @@ name:research-design
 
 ### Training Deep Learning Model
 
---
 
 - Existing labelled pork legislation
 
---
 
-- Train a deep learning model to measure pork-barrel features on parliamentary questions over time. 
+- Train a machine to identify pork-barrel features from parliamentary questions over time. 
 
-```{r echo = F, out.width = "35%"}
+```{r echo = F, out.width = "40%"}
 knitr::include_graphics("./images/diagram.png")
 ```
---
 
 ### Regression
 
---
-
-- DiD Desgin ❌
-
---
 
 - Regression analyses are employed to answer the research questions.
-
 
 ---
 layout: true
@@ -319,17 +254,15 @@ layout: true
 
 ### Training Data: Pork-barrel Legislation
 
---
 
-- The classification of these bills is typically based on the nature of the associated costs (distributed vs concentrated) and associated benefits (distributed vs concentrated).
+- The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
 
---
+- Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for __specific regions__ or __designated population groups__.
 
-```{r echo = F, out.width = "65%"}
+```{r echo = F, out.width = "50%"}
 knitr::include_graphics("./images/porktype.png")
 ```
 
-###### Source: Wilson and DiIulio (2001)
 
 ---
 
@@ -337,7 +270,6 @@ knitr::include_graphics("./images/porktype.png")
 
 &nbsp;
 
---
 
 ```{r echo = F, out.width = "55%"}
 knitr::include_graphics("./images/billeg.png")
@@ -347,15 +279,12 @@ knitr::include_graphics("./images/billeg.png")
 
 ### Number of Train/ Test Splits
 
---
 
 - The collection of this data set consists of 7243 pieces of legislation which were annotated as Pork (with label 1) or Non-Pork (with label 0).
 
 ```{r echo = F, out.width = "55%"}
 knitr::include_graphics("./images/full_plot.png")
 ```
-
---
 
 - This dataset was cross-coded by three researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders.
 
@@ -365,21 +294,7 @@ layout: true
 # Declaring DL Model
 ---
 
-### BERT Layers + Convolutional Neural Nets 
-
---
-
-```{r echo = F, out.width = "80%"}
-knitr::include_graphics("./images/framework.png")
-```
-
-
-
----
-
 ###  One-hot Encoding
-
---
 
 
 ```{r echo = F, out.width = "60%"}
@@ -390,7 +305,15 @@ knitr::include_graphics("./images/onehot.png")
 
 ###  Static Embedding Vectors 
 
---
+
+```{r echo = F, out.width = "70%"}
+knitr::include_graphics("./images/static.png")
+```
+
+---
+
+###  Static Embedding Vectors 
+
 
 ```{python eval=FALSE}
 nlp = spacy.load("en_core_web_sm")
@@ -413,14 +336,12 @@ plt.show()
 
 ---
 
-###  Static Embedding Vectors 
+###  Contexted-based BERT Embedding
 
---
 
-```{r echo = F, out.width = "70%"}
-knitr::include_graphics("./images/static.png")
+```{r echo = F, out.width = "80%"}
+knitr::include_graphics("./images/vis1.png")
 ```
-
 
 ---
 
@@ -438,11 +359,11 @@ show(model, "bert", tokenizer, text, display_mode="light", layer=0, head=8)
 
 ---
 
-###  Contexted-based BERT Embedding
+### BERT Layers + Convolutional Neural Nets 
 
 
 ```{r echo = F, out.width = "80%"}
-knitr::include_graphics("./images/vis1.png")
+knitr::include_graphics("./images/framework.png")
 ```
 
 
@@ -513,16 +434,6 @@ layout: true
 name:parliarmentary-questions  
 
 
-
-&nbsp;
-
-
-```{r echo = F, out.width = "80%"}
-knitr::include_graphics("./images/reg.png")
-```
-
----
-
 &nbsp;
 
 
@@ -540,6 +451,19 @@ knitr::include_graphics("./images/mean.png")
 ```
 
 
+---
+
+&nbsp;
+
+
+```{r echo = F, out.width = "80%"}
+knitr::include_graphics("./images/reg.png")
+```
+
+
+
+
+
 
 ---
 layout: true
@@ -549,31 +473,19 @@ layout: true
 &nbsp;
 
 
-- Evidence exists to show that legislators under MMD are more likely to express political intention about pork-barrel projects in written parliamentary questions. 
+- Evidence exists to show that legislators under SNTV are more likely to ask pork-barrel projects in the questions. 
 
---
 
-- The reform subsequently demonstrates heterogeneous effects on major parties vis-à-vis the minority parties, respectively.  
+- The reform  demonstrates heterogeneous effects on major parties vis-à-vis the minority parties  
 
---
-
-- Similar approach can be applied in European democracies.
-
---
 
 - The Limitation:
 
---
+  1. the pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown concepts developed in the post-reform period. 
 
-  1. Training data originates from 2004-to 2007. 
+  2. a steady decrease in the total number of questions since 2003
 
---
-
-  2. Can the model be applied to earlier or later periods?
-
---
-
-  3. Conducting explainable machine learning in Chinese or other Non-English languages may be somewhat challenging for social science students.
+  3. Explainable Machine Learning: in Chinese or other Non-English languages might be somewhat challenging for social science students.
 
 
 ---
@@ -600,6 +512,6 @@ name:appendix
 
 
 ```{r eval=FALSE, include=FALSE}
-pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/elp/slides/slides.html#1", verbose = FALSE)
+pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/erpb/slides/slides.html#1", verbose = FALSE)
 ```
 
