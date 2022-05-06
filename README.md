@@ -14,7 +14,7 @@ Measuring legislator behaviours and tendencies towards constituencies under diff
 
 **Keywords**：*electoral reform, single-member districts (SMDs), pork barrel, BERT, parliamentary questions, SNTV*
 
-**Documents**:  [`slides`](https://raw.githack.com/davidycliao/erpb/master/slides/slides.html) |  [`paper`](https://raw.githack.com/davidycliao/erpb/master/paper/paper.pdf)
+**Documents**:  [`slides`](https://raw.githack.com/davidycliao/erpb/main/slides/slides.html) |  [`paper`](https://raw.githack.com/davidycliao/erpb/master/paper/paper.pdf)
  
 
 </div>
