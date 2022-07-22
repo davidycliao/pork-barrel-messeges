@@ -3,6 +3,21 @@
 
 <br />
 
+<style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+</style>
+
+<img 
+  src="https://raw.githack.com/davidycliao/erpb/main/slides/images/YCLIAO_ESSEX.png"
+  alt="drawing" 
+  style="width:790px;"/>
+
+
 
 
 <div style="text-align: justify">
