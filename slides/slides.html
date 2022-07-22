@@ -4,10 +4,11 @@
     <title>Electoral Reform and Pork Barrel</title>
     <meta charset="utf-8" />
     <meta name="author" content="David Yen-Chieh Liao" />
-    <meta name="author" content=".smallest[PhD Candidate Department of Government | University of Essex]" />
-    <meta name="author" content=".smallest[Paper III / PhD Dissertation Project]" />
-    <meta name="date" content="2022-05-06" />
-    <script src="libs/header-attrs-2.12/header-attrs.js"></script>
+    <meta name="author" content=".tiny[PhD Candidate at Department of Government]" />
+    <meta name="author" content=".tiny[University of Essex]" />
+    <meta name="author" content=".tiny[Predoctoral Research Fellow at the Chair of Comparative Politices]" />
+    <meta name="author" content=".tiny[University of Bamberg]" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -17,12 +18,27 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Electoral Reform and Pork Barrel
+]
+.subtitle[
 ## .smallest.hi-slate[in Parliamentary Questions]
+]
+.author[
 ### David Yen-Chieh Liao
-### .smallest[PhD Candidate Department of Government | University of Essex]
-### .smallest[Paper III / PhD Dissertation Project]
-### 06 May 2022
+]
+.author[
+### .tiny[PhD Candidate at Department of Government]
+]
+.author[
+### .tiny[University of Essex]
+]
+.author[
+### .tiny[Predoctoral Research Fellow at the Chair of Comparative Politices]
+]
+.author[
+### .tiny[University of Bamberg]
+]
 
 ---
 
@@ -37,7 +53,7 @@ exclude: true
 
 ---
 layout: true
-# Research Questions
+# .tiny[Introduction]
 ---
 name:questions
 
@@ -45,32 +61,50 @@ name:questions
 
 - Measuring legislator behaviours and tendencies towards constituencies under different electoral systems is important.
 
+--
+
 - This paper quantitatively investigates this topic using the case of Taiwan Legislative Yuan and data on written parliamentary questions through an electoral reform from _multi-member districts (MMD)_ to _single-member districts (SMD)_. 
 
-- Research Questions:
+--
 
- 1. Are the legislators in insingle non-transferable vote system (SNTV) more likely to ask more about .hi-grey[the provision of particularistic goods] in the parliamentary questions?
+- With existing labelled pork legislation, I train deep learning models using convolutional neural networks with an embedding layer extracted from Transformer BERT to detect pork-barrel features in parliamentary questions over time. 
 
- 2. Dose the reform change legislators' electoral strategies and behaviours?
+--
+
+- Evidence exists to show that legislators under MMD are more likely to express political intention about pork-barrel projects in written parliamentary questions. The institutional change subsequently demonstrates heterogeneous effects on major parties vis-à-vis minority parties
+
+
+&lt;!-- - Research Questions: --&gt;
+
+&lt;!--  1. Are the legislators in insingle non-transferable vote system (SNTV) more likely to ask more about .hi-grey[the provision of particularistic goods] in the parliamentary questions? --&gt;
+
+&lt;!--  2. Dose the reform change legislators' electoral strategies and behaviours? --&gt;
  
 
 ---
 layout: true
-# Implication of PQs
+# .tiny[Implication of Parliarmentary Questions]
 ---
 name:questions
 
 &amp;nbsp;
-
-- Legislaive activities such as .hi-grey[legislative votings],  .hi-grey[debates] (**e.g, Parspeech V2**) and .hi-grey[parliamentary questions] play a significant role in most democracies. 
-
-- The advantages for focusing on parliamentary questions:
+&amp;nbsp;
+&amp;nbsp;
 
 
- 1. The party leadership have less control over MP's motivation to employ parliamentary questions (Judge 1974, Shane 2011).
+- Legislaive activities such as .hi-grey[legislative votings], .hi-grey[debates] (**e.g, Parspeech V2**) and .hi-grey[parliamentary questions] play a significant role in most democracies. 
 
+--
 
- 2. Parliamentary questions may reveal MPs' interests in policy preference (Shane 2011).
+- The advantages for focusing on parliamentary questions: 
+
+--
+
+  1. The party leadership have less control over MP's motivation to employ parliamentary questions (Judge 1974, Shane 2011).
+
+--
+
+  2. Parliamentary questions may reveal MPs' interests in policy preference (Shane 2011).
  
  
 ---
@@ -79,13 +113,19 @@ name:questions
 &amp;nbsp;
 &amp;nbsp;
 
-- MPs ask questions for several reasons.
+- MPs ask questions for several reasons:
 
   1. Because of their .hi-grey[expertise] or domain responsibility of delegation for question topics.
 
+--
+
   2. personal preference such as their nature of .hi-grey[substantive representation] (Russo 2021; Saalfeld 2011; Martin 2011)
   
+--
+  
   3. electoral motivation: .hi-grey[personal reputation] (Martin 2011)
+  
+--
 
   4. electoral rule and systems.
   
@@ -94,26 +134,45 @@ name:questions
 &amp;nbsp;
 &amp;nbsp;
 
-- In this paper, I introduce the case of .hi-grey[Taiwan Legislative Yuan], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems. 
+- In this paper, I introduce the case of .hi-grey[Taiwan Legislative Yuan], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems.
 
+--
 
 - In particular, parliamentary questions are the primary channel for legislators to .hi-grey[scrutinize the government] and .hi-grey[express political intentions]. 
 
+--
 
 - These parliamentary questions allow identification of different .hi-grey[question topics], .hi-grey[categories] and .hi-grey[further information] regarding .hi-grey[legislators' opinions of policy interests] and agenda at the individual level.
 
+
+
 ---
 layout: true
-# Background &amp; Literature
+# .tiny[Parliarmentary Questions]
+---
+name:parliamentary-questions  
+
+- In order to analyze parliamentary questions, I have webscraped the parliamentary questions from the official website of Taiwan Legislative Yuan from 1993 to 2020, including the relevant information about __the classified topics__, __selected keywords__ and the corresponding __question type__.
+ 
+&lt;img src="./images/image3.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+layout: true
+# .tiny[Background &amp; Literature]
 ---
 name:questions
 
 &amp;nbsp;
 
-
 - The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
+--
+
 - This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
+
+--
 
 - The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] (Cox 1990; Hirano 2006; Ames 2001), as well as .hi-grey[encouraging factional and candidate-centered electoral politics] (e.g. Batto and Huang 2016; Wu 2003). 
 
@@ -124,24 +183,17 @@ name:questions
 
 - Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] (Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995).
 
+--
+
 - Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
+
+--
 
 - Hypothesis:
 
   __1. Under SNTV-MMD, legislators are more likely to propose the questions regarding the provision of particularistic goods.__
 
   __1. Under SMD-MMM, legislators are more like to ask the questions related to programmatic and regulatory policies__
-
----
-layout: true
-# Parliarmentary Questions  
----
-name:parliamentary-questions  
-
-- In order to analyze parliamentary questions, I have webscraped the parliamentary questions from the official website of Taiwan Legislative Yuan from 1993 to 2020, including the relevant information about _the classified topics_, _selected keywords_ and the corresponding _question type_.
- 
-&lt;img src="./images/image3.png" width="55%" style="display: block; margin: auto;" /&gt;
-
 
 ---
 
@@ -151,9 +203,11 @@ name:parliamentary-questions
 
 ---
 layout: true
-# Research Design
+# .tiny[Research Design]
 ---
 name:research-design
+
+--
 
 ### Training Deep Learning Model
 
@@ -165,14 +219,15 @@ name:research-design
 
 &lt;img src="./images/diagram.png" width="40%" style="display: block; margin: auto;" /&gt;
 
-### Regression
+--
 
+### Regression
 
 - Regression analyses are employed to answer the research questions.
 
 ---
 layout: true
-# Training Data
+# .tiny[Training Data]
 ---
 
 
@@ -190,10 +245,8 @@ layout: true
 
 ### An Example of Pork Barrel Legislation
 
-&amp;nbsp;
 
-
-&lt;img src="./images/billeg.png" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;img src="./images/billeg.png" width="65%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -209,7 +262,7 @@ layout: true
 
 ---
 layout: true
-# Declaring DL Model
+# .tiny[Declaring Depp Learning Model]
 ---
 
 ###  One-hot Encoding
@@ -282,7 +335,7 @@ show(model, "bert", tokenizer, text, display_mode="light", layer=0, head=8)
 
 ---
 layout: true
-# Performances
+# .tiny[Performances]
 ---
 name:parliarmentary-questions  
 
@@ -293,7 +346,7 @@ name:parliarmentary-questions
 
 ---
 layout: true
-# Pork Featured 
+# .tiny[Pork Featured Questions]
 ---
 name:sampled-pork
  
@@ -316,7 +369,7 @@ name:sampled-pork
 
 ---
 layout: true
-# Less-pork Featured 
+# .tiny[Less-pork Featured Questions]
 ---
 name:sampled-non-pork
 
@@ -340,7 +393,7 @@ name:sampled-non-pork
 
 ---
 layout: true
-# Tentative Findings
+# .tiny[Tentative Findings]
 ---
 name:parliarmentary-questions  
 
@@ -372,7 +425,7 @@ name:parliarmentary-questions
 
 ---
 layout: true
-# Takeaway
+# .tiny[Takeaway + Limitation]
 ---
 
 &amp;nbsp;
@@ -380,9 +433,11 @@ layout: true
 
 - Evidence exists to show that legislators under SNTV are more likely to ask pork-barrel projects in the questions. 
 
+--
 
 - The reform  demonstrates heterogeneous effects on major parties vis-à-vis the minority parties  
 
+--
 
 - The Limitation:
 
@@ -465,6 +520,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
