@@ -4,10 +4,8 @@
     <title>Electoral Reform and Pork Barrel</title>
     <meta charset="utf-8" />
     <meta name="author" content="David Yen-Chieh Liao" />
-    <meta name="author" content=".tiny[PhD Candidate at Department of Government]" />
-    <meta name="author" content=".tiny[University of Essex]" />
-    <meta name="author" content=".tiny[Predoctoral Research Fellow at the Chair of Comparative Politices]" />
-    <meta name="author" content=".tiny[University of Bamberg]" />
+    <meta name="author" content=".tiny[PhD Candidate at Department of Government in University of Essex]" />
+    <meta name="author" content=".tiny[Predoctoral Research Fellow at the Chair of Comparative Politices in University of Bamberg]" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
@@ -28,16 +26,10 @@ class: center, middle, inverse, title-slide
 ### David Yen-Chieh Liao
 ]
 .author[
-### .tiny[PhD Candidate at Department of Government]
+### .tiny[PhD Candidate at Department of Government in University of Essex]
 ]
 .author[
-### .tiny[University of Essex]
-]
-.author[
-### .tiny[Predoctoral Research Fellow at the Chair of Comparative Politices]
-]
-.author[
-### .tiny[University of Bamberg]
+### .tiny[Predoctoral Research Fellow at the Chair of Comparative Politices in University of Bamberg]
 ]
 
 ---
@@ -53,153 +45,144 @@ exclude: true
 
 ---
 layout: true
-# .tiny[Introduction]
+# .tiny[Overview]
 ---
-name:questions
+name:overview
 
-&amp;nbsp;
-
-- Measuring legislator behaviours and tendencies towards constituencies under different electoral systems is important.
-
---
-
-- This paper quantitatively investigates this topic using the case of Taiwan Legislative Yuan and data on written parliamentary questions through an electoral reform from _multi-member districts (MMD)_ to _single-member districts (SMD)_. 
+- .small.hi-grey[Motivation:]  &lt;br&gt; 
+  .small[- How does the electoral reform change legislators’ preference and their intentions to bring home the bacon?]  
 
 --
-
-- With existing labelled pork legislation, I train deep learning models using convolutional neural networks with an embedding layer extracted from Transformer BERT to detect pork-barrel features in parliamentary questions over time. 
+- .small.hi-grey[Theoretical Expectation:] &lt;br&gt; 
+  .small[- Scholars have clearly explained why intraparty competition by different rules of electoral systems increases legislators’ incentives to run on a personal reputation] 
+  .small[- We however know little about whether actual impacts introduced by the electoral reform through MMD (Multi-members District) to SMD (Single-member District) reduce legislators’ motives to purse pork barrel project in the legislature.]
 
 --
+- .small.hi-grey[Data and Method:] &lt;br&gt; 
+  .small[- I train deep learning models using Convolutional Neural Networks on top of embedding layer extracted from *Transformer BERT* to evaluate pork-barrel activities in parliamentary questions.]
+  .small[- Approximately 150,000 PQs since 1993]  
 
-- Evidence exists to show that legislators under MMD are more likely to express political intention about pork-barrel projects in written parliamentary questions. The institutional change subsequently demonstrates heterogeneous effects on major parties vis-à-vis minority parties
-
-
-&lt;!-- - Research Questions: --&gt;
-
-&lt;!--  1. Are the legislators in insingle non-transferable vote system (SNTV) more likely to ask more about .hi-grey[the provision of particularistic goods] in the parliamentary questions? --&gt;
-
-&lt;!--  2. Dose the reform change legislators' electoral strategies and behaviours? --&gt;
- 
+--
+- .small.hi-grey[Major Finding:] &lt;br&gt; 
+  .small[- Evidence exists to show that legislators under MMD are more likely to express political intention about pork-barrel projects in written parliamentary questions.]
+  .small[- The reform have heterogeneous impacts on large parties vis-à-vis small parties.]
 
 ---
 layout: true
-# .tiny[Implication of Parliarmentary Questions]
+# .tiny[Why Parliarmentary Questions]
 ---
-name:questions
+name:why-pq
 
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 
-
-- Legislaive activities such as .hi-grey[legislative votings], .hi-grey[debates] (**e.g, Parspeech V2**) and .hi-grey[parliamentary questions] play a significant role in most democracies. 
-
---
-
-- The advantages for focusing on parliamentary questions: 
+#### Legislaive activities such as .ul.hi-grey[_legislative votings_ ], .ul.hi-grey[_debates_] (*e.g, Parspeech V2*) and .ul.hi-grey[_parliamentary questions_] (*e.g, LACAN*) play a significant role in most democracies. 
 
 --
 
-  1. The party leadership have less control over MP's motivation to employ parliamentary questions (Judge 1974, Shane 2011).
+&gt; __Roll Calls__: Legislative votings are generally dominent by party 
 
 --
 
-  2. Parliamentary questions may reveal MPs' interests in policy preference (Shane 2011).
+&gt; __Debates__: MPs are not equally access to floor speech
+
+--
+
+#### The advantages for focusing on PQs: 
+
+--
+
+&gt; The party leadership have less control over MP's motivation to employ parliamentary questions (Shane 2011).
+
+--
+
+&gt; Parliamentary questions may reveal MPs' interests in policy preference (Shane 2011; Saalfeld 2011)
  
  
 ---
 
-
 &amp;nbsp;
 &amp;nbsp;
 
-- MPs ask questions for several reasons:
+#### MPs ask questions for several reasons:
 
-  1. Because of their .hi-grey[expertise] or domain responsibility of delegation for question topics.
+&gt; Because of their .hi-grey[expertise] or domain responsibility of delegation for question topics.
 
 --
 
-  2. personal preference such as their nature of .hi-grey[substantive representation] (Russo 2021; Saalfeld 2011; Martin 2011)
+&gt; Personal preference such as their nature of .hi-grey[substantive representation] (Russo 2021; Saalfeld 2011; Martin 2011)
   
 --
   
-  3. electoral motivation: .hi-grey[personal reputation] (Martin 2011)
+&gt; electoral motivation: .hi-grey[personal reputation] (Martin 2011)
   
---
-
-  4. electoral rule and systems.
-  
----
-
-&amp;nbsp;
-&amp;nbsp;
-
-- In this paper, I introduce the case of .hi-grey[Taiwan Legislative Yuan], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems.
-
---
-
-- In particular, parliamentary questions are the primary channel for legislators to .hi-grey[scrutinize the government] and .hi-grey[express political intentions]. 
-
---
-
-- These parliamentary questions allow identification of different .hi-grey[question topics], .hi-grey[categories] and .hi-grey[further information] regarding .hi-grey[legislators' opinions of policy interests] and agenda at the individual level.
-
-
-
 ---
 layout: true
-# .tiny[Parliarmentary Questions]
+# .tiny[Implication]
 ---
-name:parliamentary-questions  
+name:implication
 
-- In order to analyze parliamentary questions, I have webscraped the parliamentary questions from the official website of Taiwan Legislative Yuan from 1993 to 2020, including the relevant information about __the classified topics__, __selected keywords__ and the corresponding __question type__.
- 
-&lt;img src="./images/image3.png" width="65%" style="display: block; margin: auto;" /&gt;
+&amp;nbsp;
+&amp;nbsp;
 
+#### In this paper:
 
+&gt; I introduce the case of .hi-grey[__Taiwan Legislative Yuan__], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems.
+
+--
+
+&gt; Parliamentary questions are the primary channel for legislators to .hi-grey[scrutinize the government] and .hi-grey[express political intentions]. 
+
+--
+
+&gt; These parliamentary questions allow identification of different .hi-grey[_question topics_], .hi-grey[_categories_] and further information regarding .hi-grey[_legislators' opinions of policy interests and agenda at the individual level_].
 
 ---
 layout: true
 # .tiny[Background &amp; Literature]
 ---
-name:questions
+name:background
 
-&amp;nbsp;
+&amp;nbsp;&amp;nbsp;
 
-- The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
+#### Electoral Reform in Taiwan
 
---
-
-- This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
+&gt; The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
 --
 
-- The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] (Cox 1990; Hirano 2006; Ames 2001), as well as .hi-grey[encouraging factional and candidate-centered electoral politics] (e.g. Batto and Huang 2016; Wu 2003). 
+&gt; This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
 
+--
+
+&gt; The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] (Cox 1990; Hirano 2006; Ames 2001), as well as .hi-grey[encouraging factional and candidate-centered electoral politics] (e.g. Batto and Huang 2016; Wu 2003). 
 
 ---
 
-&amp;nbsp;
+&amp;nbsp;&amp;nbsp;
 
-- Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] (Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995).
+#### Theoretical Expectation
 
---
-
-- Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
+&gt; Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] (Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995).
 
 --
 
-- Hypothesis:
+&gt; Luor and Liao (2009) finds that the more pork-barrel legislation legislators propose, the higher grant allocation the municipalities (districts) receive.
 
-  __1. Under SNTV-MMD, legislators are more likely to propose the questions regarding the provision of particularistic goods.__
+--
 
-  __1. Under SMD-MMM, legislators are more like to ask the questions related to programmatic and regulatory policies__
+&gt; Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
 
 ---
 
-&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;
 
-&lt;img src="./images/top30.png" width="80%" style="display: block; margin: auto;" /&gt;
+#### Hypothesis:
+
+&gt; _Hypothese Ⅰ: Under the SNTV-MMD, legislators are more likely to propose the questions regarding the provision of particularistic goods._
+
+&gt; _Hypothese ⅠⅠ: Under the SMD-MMM, legislators are more like to ask the questions related to programmatic and regulatory policies_
 
 ---
 layout: true
@@ -207,142 +190,57 @@ layout: true
 ---
 name:research-design
 
---
-
-### Training Deep Learning Model
+&amp;nbsp;&amp;nbsp;
 
 
-- Existing labelled pork legislation
+#### Training Deep Learning Model
+
+&gt; Existing labelled pork legislation from 2007 to 2008
 
 
-- Train a machine to identify pork-barrel features from parliamentary questions over time. 
-
-&lt;img src="./images/diagram.png" width="40%" style="display: block; margin: auto;" /&gt;
+&gt; Train a machine to identify pork-barrel features on parliamentary questions over time. 
 
 --
 
-### Regression
+#### Regression Analysis
 
-- Regression analyses are employed to answer the research questions.
+&gt; Regression analyses are employed to answer the research questions.
+
+&gt; Control for the effects from legislators and municipalities across the years. 
 
 ---
 layout: true
 # .tiny[Training Data]
 ---
 
+#### Training Data: Pork-barrel Legislation
 
-### Training Data: Pork-barrel Legislation
 
+&gt; The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
 
-- The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
+--
 
-- Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for __specific regions__ or __designated population groups__.
+&gt; Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for .ul.hi-grey[_specific regions_] or ul.hi-grey[_designated population groups_].
+
 
 &lt;img src="./images/porktype.png" width="50%" style="display: block; margin: auto;" /&gt;
 
-
 ---
 
-### An Example of Pork Barrel Legislation
-
-
-&lt;img src="./images/billeg.png" width="65%" style="display: block; margin: auto;" /&gt;
-
----
-
-### Number of Train/ Test Splits
-
+#### Number of Train/ Test Splits
 
 - The collection of this data set consists of 7243 pieces of legislation which were annotated as Pork (with label 1) or Non-Pork (with label 0).
 
 &lt;img src="./images/full_plot.png" width="55%" style="display: block; margin: auto;" /&gt;
 
-- This dataset was cross-coded by three researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders.
-
+- Terms of consistency and preciseness among coders.
 
 ---
 layout: true
-# .tiny[Declaring Depp Learning Model]
+# .tiny[BERT Layers + Convolutional Neural Nets ]
 ---
-
-###  One-hot Encoding
-
-
-&lt;img src="./images/onehot.png" width="60%" style="display: block; margin: auto;" /&gt;
-
----
-
-###  Static Embedding Vectors 
-
-
-&lt;img src="./images/static.png" width="70%" style="display: block; margin: auto;" /&gt;
-
----
-
-###  Static Embedding Vectors 
-
-
-
-```python
-nlp = spacy.load("en_core_web_sm")
-vocab = nlp("R and Python are my favorite programming languages")
-words = [word.text for word in vocab]
-vecs = np.vstack([word.vector for word in vocab if word.has_vector])
-pca = PCA(n_components=2)
-vecs_transformed = pca.fit_transform(vecs)
-```
-
-
-```python
-plt.figure(figsize=(10, 7))
-plt.scatter(vecs_transformed[:,0], vecs_transformed[:,1]) 
-for word, coord in zip(words, vecs_transformed):
-  x, y = coord
-  plt.text(x, y, word, size=7)
-plt.xlabel("Word Embedding via en_core_web_sm model from SpaCy")  
-plt.show()
-```
-
----
-
-###  Contexted-based BERT Embedding
-
-
-&lt;img src="./images/vis1.png" width="80%" style="display: block; margin: auto;" /&gt;
-
----
-
-###  Contexted-based BERT Embedding
-
-
-```python
-from transformers import AutoTokenizer
-from bertviz.transformers_neuron_view import BertModel 
-from bertviz.neuron_view import show
-tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
-model = BertModel.from_pretrained("bert-base-uncased")
-text = "R and Python are my favorite programming languages [SEP] Python is a snake"
-show(model, "bert", tokenizer, text, display_mode="light", layer=0, head=8)
-```
-
----
-
-### BERT Layers + Convolutional Neural Nets 
-
 
 &lt;img src="./images/framework.png" width="80%" style="display: block; margin: auto;" /&gt;
-
-
----
-layout: true
-# .tiny[Performances]
----
-name:parliarmentary-questions  
-
-&amp;nbsp;
-
-&lt;img src="./images/performance.png" width="80%" style="display: block; margin: auto;" /&gt;
-
 
 ---
 layout: true
@@ -357,14 +255,14 @@ name:sampled-pork
 
 | Legislator |       Questions         |                  Topics                      |                        Keywords                      |
 |:----------:|:------------------------|----------------------------------------------|------------------------------------------------------|
-| 陳啟昱	   |鑑於現行《所得稅法》第十.| Income tax; education expenses; deductions   | Special Deductions; Educational Expenditure          |
-| 彭添富	   |針對「辦理九十四年原住民 | Aboriginal life                              |	housing subsidies                                    |
-| 李復興	   |發現自九十三年一月間起   | Old-age benefits; labor retirement           |	Retired employees allowance for the elderly          |
-| 盧秀燕	   |針對早期退除役軍官給與補 | Veterans welfare                             |	Grants for early retired officers                    |
-| 丁守中	   |針就民眾陳情指出，目前政 | Welfare for the handicapped                  |	Living allowance                                     |
-| 馮定國	   |鑒於國內經濟結構的快速   | Elderly Welfare                              |	Aging; middle and old age unemployment               |
-| 彭添富	   |針對「豪雨成災，         | Agricultural Subsidies                       |	Heavy rain; crops                                    |
-| 曾華德	   |為民國38年至43年間戌     | Military Pay                                 |	Anti-Communist Salvation Army Reimbursement of Salary|
+| 陳啟昱	   |鑑於現行《所得稅法》第十 | Income tax; education expenses; deductions   | Special Deductions; Educational .ul.hi-grey[_Expenditure_]     |
+| 彭添富	   |針對「辦理九十四年原住民 | Aboriginal life                              |	housing .ul.hi-grey[_subsidies_]                     |
+| 李復興	   |發現自九十三年一月間起   | labor retirement .ul.hi-grey[_benefits_]     |	Retired employees .ul.hi-grey[_allowance_] for the elderly      |
+| 盧秀燕	   |針對早期退除役軍官給與補 | Veterans welfare                             |	.ul.hi-grey[_Grants_] for early retired officers     |
+| 丁守中	   |針就民眾陳情指出，目前政 | Welfare for the handicapped                  |	Living .ul.hi-grey[_allowance_]                      |
+| 馮定國	   |鑒於國內經濟結構的快速   | Elderly .ul.hi-grey[_welfare_]               |	Aging; middle and old age unemployment               |
+| 彭添富	   |針對「豪雨成災，         | Agricultural .ul.hi-grey[_subsidies_]        |	Heavy rain; crops                                    |
+| 曾華德	   |為民國38年至43年間戌     | Military .ul.hi-grey[_pay_]                  |	Anti-Communist Salvation Army Reimbursement of Salary|
 
 
 ---
@@ -380,14 +278,14 @@ name:sampled-non-pork
 
 | Legislator |       Questions         |                  Topics                      |                        Keywords                      |
 |:----------:|:------------------------|----------------------------------------------|------------------------------------------------------|
-| 李復甸	   |鑑於刑事偵察實務上緩起   |Investigation; litigation procedure           |	Criminal investigation; secret witness               |
-| 林建榮	   |為立法院朝野協商修改銀   |Financial management; bank management         |	Banking Law; Cash Card; Revolving Interest Rate      |
+| 李復甸	   |鑑於刑事偵察實務上緩起   |Investigation; litigation procedure           |	.ul.hi-grey[_Criminal investigation_] ; secret witness|
+| 林建榮	   |為立法院朝野協商修改銀   |Financial management; bank management         |	.ul.hi-grey[_Banking Law_]; Cash Card; Revolving Interest Rate      |
 | 林正峰	   |針對行政院長張俊雄日前   |Energy policy                                 |	Energy saving                                        |
-| 林正峰	   |鑑於近年來臺灣地區毒品   |Tobacco Restriction; Hospital                 |	Drug Abuse; Departmental Hospital                    |
-| 王幸男	   |針對道路人孔蓋或管線挖   |Public Safety                                 |	Manhole cover; public safety; road quality           |
-| 管碧玲	   |針對近日台灣鐵路管理局	 |Railway management; ticket	                  | Online booking; monopoly; Taiwan Railway             |
-| 黃敏惠	   |就近日來爆發知名提神飲   |Drinks; Poisoning                             |	Drinks; Poisoning                                    |
-| 陳朝龍	   |針對英國政府宣稱台灣出   |Infectious disease prevention and control     |	British Government; Taiwanese birds; Avian Influenza |
+| 林正峰	   |鑑於近年來臺灣地區毒品   |Tobacco Restriction; Hospital                 |	.ul.hi-grey[_Drug Abuse_]; Departmental Hospital                    |
+| 王幸男	   |針對道路人孔蓋或管線挖   |Public Safety                                 |	Manhole cover; .ul.hi-grey[_public safety_]; road quality           |
+| 管碧玲	   |針對近日台灣鐵路管理局	 |Railway management; ticket	                  | .ul.hi-grey[_Online booking_]; monopoly; Taiwan Railway             |
+| 黃敏惠	   |就近日來爆發知名提神飲   |Drinks; Poisoning                             |	Drinks; Poisoning, .ul.hi-grey[_Poisoning_]                  |
+| 陳朝龍	   |針對英國政府宣稱台灣出   |Infectious disease prevention and control     |	British Government; Taiwanese birds; Avian Influenza  .ul.hi-grey[_Avian Influenza_]  |
 
 
 
@@ -419,16 +317,14 @@ name:parliarmentary-questions
 &lt;img src="./images/reg.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 
-
-
-
-
 ---
 layout: true
-# .tiny[Takeaway + Limitation]
+# .tiny[Takeaway]
 ---
 
-&amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+
+#### Takeaway
 
 
 - Evidence exists to show that legislators under SNTV are more likely to ask pork-barrel projects in the questions. 
@@ -439,14 +335,13 @@ layout: true
 
 --
 
-- The Limitation:
+#### The Limitation:
 
-  1. the pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown concepts developed in the post-reform period. 
+&gt; __Training Data__: The pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown/undeve concepts developed in the post-reform period. 
 
-  2. a steady decrease in the total number of questions since 2003
+--
 
-  3. Explainable Machine Learning: in Chinese or other Non-English languages might be somewhat challenging for social science students.
-
+&gt; __Social Media?__: A steady decrease in the total number of PQs since 2003
 
 ---
 layout: false
@@ -456,19 +351,162 @@ class: inverse, center, middle
 
 ---
 layout: true
-# Appendix
+# .tiny[Table of Appendix]
 ---
 name:appendix
 
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
 
 
-### Miscellaneous
+#### Supplementary
 
-- .smaller[PorkCNN: A Small Project for Pork Barrel Legislation Classification Using Convolutional Neural Networks (https://github.com/davidycliao/PorkCNN)]
+.turquoise.smaller[
+[An Example of Parliamentary](#parliamentary-questions) | [The Number of Parliamentary Question](#num-pq) | [The Performance of the Models](#performance)
+]
 
-- .smaller[Tensorboard of PorkCNN (https://tensorboard.dev/experiment/2Jm6GKexQiKaLyUz5uKSzg/#scalars)]
 
-- .smaller[legisCrawler: An Automation Webcrawling Toolkit for Retrieving Taiwan Parliamentary Questions (https://github.com/davidycliao/legisCrawler)]
+#### Embedding Types
+
+.turquoise.smaller[
+ [One-hot Encoding](#one-hot-encoding) |  [Static Embedding Vectors](#static-embedding-vectors) | [Contexted-based BERT Embedding](#bert)
+ ]
+
+#### Miscellaneous
+
+.turquoise.smaller[
+[Tensorboard of PorkCNNBERT](Tensorboard of PorkCNN) | [legisCrawler: An Toolkit for Retrieving Taiwan Parliamentary Questions](https://github.com/davidycliao/legisCrawler)
+
+]
+
+
+---
+layout: true
+# .tiny[Parliarmentary Questions]
+---
+name:parliamentary-questions  
+
+- In order to analyze parliamentary questions, I have webscraped the parliamentary questions from the official website of Taiwan Legislative Yuan from 1993 to 2020, including the relevant information about .ul.hi-grey[_the classified topics_], .ul.hi-grey[_selected keywords_] and the corresponding .ul.hi-grey[_question type_].
+ 
+&lt;img src="./images/image3.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+
+---
+layout: true
+# .tiny[One-hot Encoding]
+---
+name:one-hot-encoding
+
+&amp;nbsp;
+&amp;nbsp;
+
+
+&lt;img src="./images/onehot.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: true
+# .tiny[Static Embedding Vectors]
+---
+name:static-embedding-vectors 
+
+&amp;nbsp;
+&amp;nbsp;
+
+&lt;img src="./images/static.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+&amp;nbsp;
+&amp;nbsp;
+
+
+```python
+nlp = spacy.load("en_core_web_sm")
+vocab = nlp("R and Python are my favorite programming languages")
+words = [word.text for word in vocab]
+vecs = np.vstack([word.vector for word in vocab if word.has_vector])
+pca = PCA(n_components=2)
+vecs_transformed = pca.fit_transform(vecs)
+```
+
+
+```python
+plt.figure(figsize=(10, 7))
+plt.scatter(vecs_transformed[:,0], vecs_transformed[:,1]) 
+for word, coord in zip(words, vecs_transformed):
+  x, y = coord
+  plt.text(x, y, word, size=7)
+plt.xlabel("Word Embedding via en_core_web_sm model from SpaCy")  
+plt.show()
+```
+
+---
+layout: true
+# .tiny[Contexted-based BERT Embedding]
+---
+name:bert
+
+&amp;nbsp;
+&amp;nbsp;
+
+
+&lt;img src="./images/vis1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&amp;nbsp;
+&amp;nbsp;
+
+
+```python
+from transformers import AutoTokenizer
+from bertviz.transformers_neuron_view import BertModel 
+from bertviz.neuron_view import show
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+model = BertModel.from_pretrained("bert-base-uncased")
+text = "R and Python are my favorite programming languages [SEP] Python is a snake"
+show(model, "bert", tokenizer, text, display_mode="light", layer=0, head=8)
+```
+
+
+---
+layout: true
+# .tiny[The Performance of CNN, BERT and CNN-BERT]
+---
+name:performance
+&amp;nbsp;
+&amp;nbsp;
+
+&amp;nbsp;
+
+&lt;img src="./images/performance.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+layout: true
+# .tiny[The Distribution of Parliamentary Questions Categories]
+---
+name:dis-keyowords
+&amp;nbsp;
+&amp;nbsp;
+
+&lt;img src="./images/bothkeywords.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+layout: true
+# .tiny[The Number of Parliamentary Questions from 1993 to 2019]
+---
+name:num-pq
+&amp;nbsp;
+&amp;nbsp;
+
+&lt;img src="./images/numpq.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
 
 
 
@@ -621,33 +659,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-<style>
-  .logo {
-    background-image: url(images/essex.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0.7em;
-    right: 1em;
-    width: 50px;
-    height: 55px;
-    z-index: 0;
-  }
-</style>
-  
-  <script>
-  document
-.querySelectorAll(
-  '.remark-slide-content' +
-    ':not(.title-slide)' +
-    // add additional classes to exclude here, e.g.
-  // ':not(.inverse)' +
-    ':not(.hide-logo)'
-)
-.forEach(el => {
-  el.innerHTML += '<div class="logo"></div>';
-});
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
