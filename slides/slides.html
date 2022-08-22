@@ -82,9 +82,9 @@ name:why-pq
 
 &gt; __Debates__: MPs are not equally access to floor speech
 
-&gt; + .pad-left[.grey-light.it[Slapin et. al (2018): Politicians grandstand strategically against party in the British Parliament]]
+&gt; + .grey-light.it[Slapin et. al (2018): Politicians grandstand strategically against party in the British Parliament]
 
-&gt; + .pad-left[.grey-light.it[Park (2021): in US House committee Hearings]]
+&gt; + ..grey-light.it[Park (2021): in US House committee Hearings]
 
 --
 
@@ -147,13 +147,13 @@ name:background
 
 &amp;nbsp;&amp;nbsp;
 
-#### Electoral Reform in Taiwan
+#### Electoral Reform in Taiwan:
 
 &gt; + The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
 --
 
-&gt; + This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
+&gt; + This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation .grey-light[(Cox 1990; Carey and Shugart 1995)]. 
 
 --
 
@@ -163,9 +163,9 @@ name:background
 
 &amp;nbsp;&amp;nbsp;
 
-#### Theoretical Expectation
+#### Theoretical Expectation:
 
-&gt; + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services]  .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
+&gt; + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
 
 --
 
@@ -193,8 +193,7 @@ name:research-design
 
 &amp;nbsp;&amp;nbsp;
 
-
-#### Training Deep Learning Model
+#### Training Deep Learning Model:
 
 &gt; Existing labelled pork legislation from 2007 to 2008
 
@@ -203,7 +202,7 @@ name:research-design
 
 --
 
-#### Regression Analysis
+#### Regression Analysis:
 
 &gt; Regression analyses are employed to answer the research questions.
 
@@ -217,25 +216,24 @@ layout: true
 #### Training Data: Pork-barrel Legislation
 
 
-&gt; The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
+&gt; - The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
 
 --
 
-&gt; Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for .ul.hi-grey[_specific regions_] or ul.hi-grey[_designated population groups_].
+&gt; - Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for .ul.hi-grey[_specific regions_] or .ul.hi-grey[_designated population groups_].
 
 
 &lt;img src="./images/porktype.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-#### Number of Train/ Test Splits
+#### Number of Train/ Test Sets
 
-- The collection of this data set consists of 7243 pieces of legislation which were annotated as Pork (with label 1) or Non-Pork (with label 0).
+- The collection of this data set consists of .ul.hi-grey[_7243 pieces of legislation_] which were annotated as .ul.hi-grey[_Pork_] or .ul.hi-grey[_Non-Pork_].
 
 &lt;img src="./images/full_plot.png" width="55%" style="display: block; margin: auto;" /&gt;
 
-- This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders (Luor and Hsieh 2008; Luor and Liao 2009).
-
+- This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders .grey-light[(Luor and Hsieh 2008; Luor and Liao 2009)].
 ---
 layout: true
 # .tiny[BERT Layers + Convolutional Neural Nets ]
@@ -246,7 +244,7 @@ layout: true
 
 &gt; self-attention mechanism  
 
-&gt; dealing with unseen words, in particularily in Chinese (unspaced language).
+&gt; dealing with .ul.hi-grey[_unseen words_], particularily in Chinese (unspaced language).
 
 &lt;img src="./images/framework.png" width="60%" style="display: block; margin: auto;" /&gt;
 
