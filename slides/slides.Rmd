@@ -11,7 +11,7 @@ output:
     css: ['default', 'metropolis', 'metropolis-fonts', 'my-css.css']     
     lib_dir: libs
     includes:
-      # after_body: insert-logo.html
+      after_body: insert-logo.html
     nature:
       highlightStyle: github
       highlightLines: true
@@ -19,7 +19,6 @@ output:
       countdown: 40000
 ---
 exclude: true
-
 
 ```{r, setup, include = FALSE}
 if (!require("pacman")) install.packages("pacman")
@@ -134,11 +133,7 @@ layout: true
 ---
 name:why-pq
 
-&nbsp;
-&nbsp;
-&nbsp;
-
-#### Legislaive activities such as .ul.hi-grey[_legislative votings_ ], .ul.hi-grey[_debates_] (*e.g, Parspeech V2*) and .ul.hi-grey[_parliamentary questions_] (*e.g, LACAN*) play a significant role in most democracies. 
+#### Legislaive activities such as .ul.hi-grey[_legislative votings_], .ul.hi-grey[_debates_] (*e.g, ParSpeech V2*) and .ul.hi-grey[_parliamentary questions_] (*e.g, LACAN*) play a significant role in most democracies. 
 
 --
 
@@ -148,35 +143,41 @@ name:why-pq
 
 > __Debates__: MPs are not equally access to floor speech
 
---
+> + .pad-left[.grey-light.it[Slapin et. al (2018): Politicians grandstand strategically against party in the British Parliament]]
 
-#### The advantages for focusing on PQs: 
-
---
-
-> The party leadership have less control over MP's motivation to employ parliamentary questions (Shane 2011).
+> + .pad-left[.grey-light.it[Park (2021): in US House committee Hearings]]
 
 --
 
-> Parliamentary questions may reveal MPs' interests in policy preference (Shane 2011; Saalfeld 2011)
- 
+#### The advantages of using the PQs: 
+
+> .ul.hi-grey[_comprehensive_], .ul.hi-grey[_accessible_], and .ul.hi-grey[_rich_] 
+
+--
+
+> The party leadership have less control over MP's motivation to employ parliamentary questions .grey-light.it[(Shane 2011)].
+
+--
+
+> Parliamentary questions may reveal MPs' interests in policy preference .grey-light[(Shane 2011; Saalfeld 2011)].
  
 ---
 
 &nbsp;
-&nbsp;
 
 #### MPs ask questions for several reasons:
 
-> Because of their .hi-grey[expertise] or domain responsibility of delegation for question topics.
+> + Because of their .hi-grey[expertise] or domain responsibility of delegation for question topics.
 
 --
 
-> Personal preference such as their nature of .hi-grey[substantive representation] (Russo 2021; Saalfeld 2011; Martin 2011)
+> + Personal preference such as their nature of .hi-grey[substantive representation] .grey-light.it[(Russo 2021; Saalfeld 2011; Martin 2011)]
+
+
   
 --
   
-> electoral motivation: .hi-grey[personal reputation] (Martin 2011)
+> + Electoral motivation: .hi-grey[personal reputation] .grey-light[(Martin 2011)]
   
 ---
 layout: true
@@ -189,15 +190,15 @@ name:implication
 
 #### In this paper:
 
-> I introduce the case of .hi-grey[__Taiwan Legislative Yuan__], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems.
+> + I introduce the case of .hi-grey[__Taiwan Legislative Yuan__], where the electoral system reformed through SNTV to SMD, to evaluate how electoral motives shape legislators' tendency to pork-barrel projects under different electoral systems.
 
 --
 
-> Parliamentary questions are the primary channel for legislators to .hi-grey[scrutinize the government] and .hi-grey[express political intentions]. 
+> + Parliamentary questions are the primary channel for legislators to .hi-grey[scrutinize the government] and .hi-grey[express political intentions]. 
 
 --
 
-> These parliamentary questions allow identification of different .hi-grey[_question topics_], .hi-grey[_categories_] and further information regarding .hi-grey[_legislators' opinions of policy interests and agenda at the individual level_].
+> + These parliamentary questions allow identification of different .hi-grey[_question topics_], .hi-grey[_categories_] and further information regarding .hi-grey[_legislators' opinions of policy interests and agenda at the individual level_].
 
 ---
 layout: true
@@ -209,15 +210,15 @@ name:background
 
 #### Electoral Reform in Taiwan
 
-> The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
+> + The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
 --
 
-> This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
+> + This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
 
 --
 
-> The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] (Cox 1990; Hirano 2006; Ames 2001), as well as .hi-grey[encouraging factional and candidate-centered electoral politics] (e.g. Batto and Huang 2016; Wu 2003). 
+> + The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] .grey-light[(Cox 1990; Hirano 2006; Ames 2001)], as well as .hi-grey[encouraging factional and candidate-centered electoral politics] .grey-light[(e.g. Batto and Huang 2016; Wu 2003)]. 
 
 ---
 
@@ -225,15 +226,15 @@ name:background
 
 #### Theoretical Expectation
 
-> Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] (Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995).
+> + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services]  .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
 
 --
 
-> Luor and Liao (2009) finds that the more pork-barrel legislation legislators propose, the higher grant allocation the municipalities (districts) receive.
+> + Luor and Liao (2009) finds that the more pork-barrel legislation legislators propose, the higher grant allocation the municipalities (districts) receive.
 
 --
 
-> Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
+> + Catalinac (2016) finds that LDP (Liberal Democratic Party) candidates under the SMDs in Japan adopted new electoral strategies by mentioning programmatic policies such as national security.
 
 ---
 
@@ -298,14 +299,21 @@ knitr::include_graphics("./images/porktype.png")
 knitr::include_graphics("./images/full_plot.png")
 ```
 
-- Terms of consistency and preciseness among coders.
+- This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders (Luor and Hsieh 2008; Luor and Liao 2009).
 
 ---
 layout: true
 # .tiny[BERT Layers + Convolutional Neural Nets ]
 ---
 
-```{r echo = F, out.width = "80%"}
+
+#### Strength
+
+> self-attention mechanism  
+
+> dealing with unseen words, in particularily in Chinese (unspaced language).
+
+```{r echo = F, out.width = "60%"}
 knitr::include_graphics("./images/framework.png")
 ```
 
@@ -370,13 +378,14 @@ name:parliarmentary-questions
 knitr::include_graphics("./images/num.png")
 ```
 
+
 ---
 
 &nbsp;
 
 
 ```{r echo = F, out.width = "80%"}
-knitr::include_graphics("./images/mean.png")
+knitr::include_graphics("./images/reg.png")
 ```
 
 
@@ -386,7 +395,7 @@ knitr::include_graphics("./images/mean.png")
 
 
 ```{r echo = F, out.width = "80%"}
-knitr::include_graphics("./images/reg.png")
+knitr::include_graphics("./images/mean.png")
 ```
 
 
@@ -424,7 +433,7 @@ class: inverse, center, middle
 
 ---
 layout: true
-# .tiny[Table of Appendix]
+# .tiny[Table of the Appendix]
 ---
 name:appendix
 
@@ -432,27 +441,24 @@ name:appendix
 &nbsp;
 &nbsp;
 
-
 #### Supplementary
 
 .turquoise.smaller[
 [An Example of Parliamentary](#parliamentary-questions) | [The Number of Parliamentary Question](#num-pq) | [The Performance of the Models](#performance)
 ]
 
-
 #### Embedding Types
 
 .turquoise.smaller[
- [One-hot Encoding](#one-hot-encoding) |  [Static Embedding Vectors](#static-embedding-vectors) | [Contexted-based BERT Embedding](#bert)
+ [One-hot Encoding](#one-hot-encoding) |  [Static Embedding Vectors](#static-embedding-vectors) | [Contexted-based BERT Embedding](#bert) | [One-hot vs Embedding Representation](#one-hot-embedding)
  ]
 
 #### Miscellaneous
 
 .turquoise.smaller[
-[Tensorboard of PorkCNNBERT](Tensorboard of PorkCNN) | [legisCrawler: An Toolkit for Retrieving Taiwan Parliamentary Questions](https://github.com/davidycliao/legisCrawler)
+[TensorBoard of PorkCNNBERT](https://tensorboard.dev/experiment/2Jm6GKexQiKaLyUz5uKSzg/#scalars) | [legisCrawler: An Toolkit for Retrieving Taiwan Parliamentary Questions](https://github.com/davidycliao/legisCrawler)
 
 ]
-
 
 ---
 layout: true
@@ -545,6 +551,22 @@ model = BertModel.from_pretrained("bert-base-uncased")
 text = "R and Python are my favorite programming languages [SEP] Python is a snake"
 show(model, "bert", tokenizer, text, display_mode="light", layer=0, head=8)
 ```
+
+
+---
+layout: true
+# .tiny[One-hot vs Embedding Representation]
+---
+name:one-hot-embedding
+&nbsp;
+&nbsp;
+&nbsp;
+
+```{r echo = F, out.width = "40%"}
+knitr::include_graphics("./images/onehot-embedding.png")
+```
+
+.pad-left[.grey-light.it[Source:Deep Learning with Python 2019, p151]]
 
 
 ---
