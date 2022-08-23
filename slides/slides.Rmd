@@ -609,7 +609,7 @@ knitr::include_graphics("./images/bothkeywords.png")
 
 ---
 layout: true
-# .tiny[The Number of Parliamentary Questions from 1993 to 2019]
+# .tiny[The Number of Parliamentary Questions from 1993 to 2020]
 ---
 name:num-pq
 &nbsp;
