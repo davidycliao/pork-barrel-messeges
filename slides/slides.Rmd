@@ -115,7 +115,7 @@ name:overview
 --
 - .small.hi-grey[Theoretical Expectation:] <br> 
   .small[- Scholars have clearly explained why intraparty competition by different rules of electoral systems increases legislators’ incentives to run on a personal reputation] 
-  .small[- We however know little about whether actual impacts introduced by the electoral reform through MMD (Multi-members District) to SMD (Single-member District) reduce legislators’ motives to purse pork barrel project in the legislature.]
+  .small[- We however know little about whether actual impacts introduced by the electoral reform through MMD (Multi-members District) to SMD (Single-member District) reduce legislators’ motives to pursue pork barrel project in the legislature.]
 
 --
 - .small.hi-grey[Data and Method:] <br> 
@@ -125,7 +125,7 @@ name:overview
 --
 - .small.hi-grey[Major Finding:] <br> 
   .small[- Evidence exists to show that legislators under MMD are more likely to express political intention about pork-barrel projects in written parliamentary questions.]
-  .small[- The reform have heterogeneous impacts on large parties vis-à-vis small parties.]
+  .small[- The reform have heterogeneous impacts on mainstream parties vis-à-vis small parties.]
 
 ---
 layout: true
@@ -139,13 +139,13 @@ name:why-pq
 
 > __Roll Calls__: Legislative votings are generally dominent by party 
 
+> + .grey-light.it[Slapin et. al (2018): Politicians grandstand strategically against party in the British Parliament]
+
+> + .grey-light.it[Park (2021): in US House committee Hearings]
+
 --
 
 > __Debates__: MPs are not equally access to floor speech
-
-> + .pad-left[.grey-light.it[Slapin et. al (2018): Politicians grandstand strategically against party in the British Parliament]]
-
-> + .pad-left[.grey-light.it[Park (2021): in US House committee Hearings]]
 
 --
 
@@ -178,7 +178,7 @@ name:why-pq
 --
   
 > + Electoral motivation: .hi-grey[personal reputation] .grey-light[(Martin 2011)]
-  
+
 ---
 layout: true
 # .tiny[Implication]
@@ -208,25 +208,27 @@ name:background
 
 &nbsp;&nbsp;
 
-#### Electoral Reform in Taiwan
+#### Theoretical Expectation:
 
 > + The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
 --
 
-> + This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation (Cox 1990; Carey and Shugart 1995).
+> + This was thought to intensify majority-seeking parties to run more than one candidate in a district, which increases incentives for candidates to run on personal votes against their party reputation .grey-light[(Cox 1990; Carey and Shugart 1995)]. 
 
 --
 
-> + The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] .grey-light[(Cox 1990; Hirano 2006; Ames 2001)], as well as .hi-grey[encouraging factional and candidate-centered electoral politics] .grey-light[(e.g. Batto and Huang 2016; Wu 2003)]. 
+> + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
+
 
 ---
 
 &nbsp;&nbsp;
 
-#### Theoretical Expectation
+#### SNTV in Taiwan Before 2008
 
-> + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services]  .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
+
+> + The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] .grey-light[(Cox 1990; Hirano 2006; Ames 2001)], as well as .hi-grey[encouraging factional and candidate-centered electoral politics] .grey-light[(e.g. Batto and Huang 2016; Wu 2003)]. 
 
 --
 
@@ -254,8 +256,7 @@ name:research-design
 
 &nbsp;&nbsp;
 
-
-#### Training Deep Learning Model
+#### Training Deep Learning Model:
 
 > Existing labelled pork legislation from 2007 to 2008
 
@@ -264,54 +265,45 @@ name:research-design
 
 --
 
-#### Regression Analysis
+#### Regression Analysis:
 
 > Regression analyses are employed to answer the research questions.
 
 > Control for the effects from legislators and municipalities across the years. 
 
----
-layout: true
-# .tiny[Training Data]
+
 ---
 
-#### Training Data: Pork-barrel Legislation
+#### Training Data (Pork-barrel Legislation):
 
 
-> The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
+> - The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
 
 --
 
-> Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for .ul.hi-grey[_specific regions_] or ul.hi-grey[_designated population groups_].
+> - Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for .ul.hi-grey[_specific regions_] or .ul.hi-grey[_designated population groups_].
 
+--
 
-```{r echo = F, out.width = "50%"}
+> - This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders .grey-light[(Luor and Hsieh 2008; Luor and Liao 2009)].
+
+```{r echo = F, out.width = "38%"}
 knitr::include_graphics("./images/porktype.png")
 ```
 
----
-
-#### Number of Train/ Test Splits
-
-- The collection of this data set consists of 7243 pieces of legislation which were annotated as Pork (with label 1) or Non-Pork (with label 0).
-
-```{r echo = F, out.width = "55%"}
-knitr::include_graphics("./images/full_plot.png")
-```
-
-- This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders (Luor and Hsieh 2008; Luor and Liao 2009).
 
 ---
 layout: true
 # .tiny[BERT Layers + Convolutional Neural Nets ]
 ---
 
-
-#### Strength
+#### Strength:
 
 > self-attention mechanism  
 
-> dealing with unseen words, in particularily in Chinese (unspaced language).
+> dealing with .ul.hi-grey[_unseen words_], particularily in Chinese (unspaced language).
+
+> Hate speech detection .grey-light[(Safaya, Abdullatif, and Yuret 2020)] and patent document classification .grey-light[ (Lu and Ni 2019)]
 
 ```{r echo = F, out.width = "60%"}
 knitr::include_graphics("./images/framework.png")
@@ -332,7 +324,7 @@ name:sampled-pork
 |:----------:|:------------------------|----------------------------------------------|------------------------------------------------------|
 | 陳啟昱	   |鑑於現行《所得稅法》第十 | Income tax; education expenses; deductions   | Special Deductions; Educational .ul.hi-grey[_Expenditure_]     |
 | 彭添富	   |針對「辦理九十四年原住民 | Aboriginal life                              |	housing .ul.hi-grey[_subsidies_]                     |
-| 李復興	   |發現自九十三年一月間起   | labor retirement .ul.hi-grey[_benefits_]     |	Retired employees .ul.hi-grey[_allowance_] for the elderly      |
+| 李復興	   |發現自九十三年一月間起   | labor retirement benefits                    |	Retired employees .ul.hi-grey[_allowance_] for the elderly      |
 | 盧秀燕	   |針對早期退除役軍官給與補 | Veterans welfare                             |	.ul.hi-grey[_Grants_] for early retired officers     |
 | 丁守中	   |針就民眾陳情指出，目前政 | Welfare for the handicapped                  |	Living .ul.hi-grey[_allowance_]                      |
 | 馮定國	   |鑒於國內經濟結構的快速   | Elderly .ul.hi-grey[_welfare_]               |	Aging; middle and old age unemployment               |
@@ -413,13 +405,13 @@ layout: true
 
 --
 
-- The reform  demonstrates heterogeneous effects on major parties vis-à-vis the minority parties  
+- The reform  demonstrates heterogeneous effects on manistream parties vis-à-vis small parties  
 
 --
 
 #### The Limitation:
 
-> __Training Data__: The pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown/undeve concepts developed in the post-reform period. 
+> __Training Data__: The pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown concepts developed after the post-reform period. 
 
 --
 
@@ -444,8 +436,9 @@ name:appendix
 #### Supplementary
 
 .turquoise.smaller[
-[An Example of Parliamentary](#parliamentary-questions) | [The Number of Parliamentary Question](#num-pq) | [The Performance of the Models](#performance)
+[An Example of Parliamentary](#parliamentary-questions) | [The Number of Parliamentary Question](#num-pq) | [The Performance of the Models](#performance) | [Number of Train/ Test Sets](num-train-test)
 ]
+
 
 #### Embedding Types
 
@@ -485,6 +478,21 @@ name:one-hot-encoding
 
 ```{r echo = F, out.width = "60%"}
 knitr::include_graphics("./images/onehot.png")
+```
+
+
+
+---
+layout: true
+# .tiny[Number of Train/ Test Sets]
+---
+name:num-train-test
+
+
+- The collection of this data set consists of .ul.hi-grey[_7243 pieces of legislation_] which were annotated as .ul.hi-grey[_Pork_] or .ul.hi-grey[_Non-Pork_].
+
+```{r echo = F, out.width = "55%"}
+knitr::include_graphics("./images/full_plot.png")
 ```
 
 ---

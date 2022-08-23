@@ -147,7 +147,7 @@ name:background
 
 &amp;nbsp;&amp;nbsp;
 
-#### Electoral Reform in Taiwan:
+#### Theoretical Expectation:
 
 &gt; + The SNTV-MMD was the major system to elect legislators before 2008 in Taiwan. 
 
@@ -157,15 +157,17 @@ name:background
 
 --
 
-&gt; + The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] .grey-light[(Cox 1990; Hirano 2006; Ames 2001)], as well as .hi-grey[encouraging factional and candidate-centered electoral politics] .grey-light[(e.g. Batto and Huang 2016; Wu 2003)]. 
+&gt; + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
+
 
 ---
 
 &amp;nbsp;&amp;nbsp;
 
-#### Theoretical Expectation:
+#### SNTV in Taiwan Before 2008
 
-&gt; + Under SNTV, co-partisan candidates cannot rely exclusively on their party reputation and have to find an alternative means of attracting votes by .hi-grey[running on a personal reputation] via .hi-grey[providing paricularistic services] .grey-light[(Cain, Ferejohn, and Fiorina 1987; Reed 1994; Carey and Shugart 1995)].
+
+&gt; + The SNTV in Taiwan was criticized for creating .hi-grey[excessive intra-party chaos and competition] .grey-light[(Cox 1990; Hirano 2006; Ames 2001)], as well as .hi-grey[encouraging factional and candidate-centered electoral politics] .grey-light[(e.g. Batto and Huang 2016; Wu 2003)]. 
 
 --
 
@@ -208,12 +210,10 @@ name:research-design
 
 &gt; Control for the effects from legislators and municipalities across the years. 
 
----
-layout: true
-# .tiny[Training Data]
+
 ---
 
-#### Training Data: Pork-barrel Legislation
+#### Training Data (Pork-barrel Legislation):
 
 
 &gt; - The gold standard for identifying the pork-barrel legislation is based on the target beneficiaries of the policy (distributed vs concentrated)  and attributes of policy cost (distributed vs concentrated).
@@ -222,32 +222,25 @@ layout: true
 
 &gt; - Typical pork-barrel policies (or legislation) mainly incur distributed costs while generating parochial benefits for .ul.hi-grey[_specific regions_] or .ul.hi-grey[_designated population groups_].
 
+--
 
-&lt;img src="./images/porktype.png" width="50%" style="display: block; margin: auto;" /&gt;
+&gt; - This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders .grey-light[(Luor and Hsieh 2008; Luor and Liao 2009)].
 
-.pad-left[.grey-light.it[Luor, Ching Jyuhn, and Fu Yao Chan. 2012. “The Relationship between Particularistic Benefit Bills Initiated by Legislators and the Geographic Distribution of Categorical Grants in Taiwan, FY2005-FY2009.” Journal of Public Administration 42:1–32.]]
+&lt;img src="./images/porktype.png" width="38%" style="display: block; margin: auto;" /&gt;
 
 
----
-
-#### Number of Train/ Test Sets
-
-- The collection of this data set consists of .ul.hi-grey[_7243 pieces of legislation_] which were annotated as .ul.hi-grey[_Pork_] or .ul.hi-grey[_Non-Pork_].
-
-&lt;img src="./images/full_plot.png" width="55%" style="display: block; margin: auto;" /&gt;
-
-- This dataset was cross-coded by three social science researchers to perform its validity, which achieves 98% in terms of consistency and preciseness among coders .grey-light[(Luor and Hsieh 2008; Luor and Liao 2009)].
 ---
 layout: true
 # .tiny[BERT Layers + Convolutional Neural Nets ]
 ---
 
-
-#### Strength
+#### Strength:
 
 &gt; self-attention mechanism  
 
 &gt; dealing with .ul.hi-grey[_unseen words_], particularily in Chinese (unspaced language).
+
+&gt; Hate speech detection .grey-light[(Safaya, Abdullatif, and Yuret 2020)] and patent document classification .grey-light[ (Lu and Ni 2019)]
 
 &lt;img src="./images/framework.png" width="60%" style="display: block; margin: auto;" /&gt;
 
@@ -266,7 +259,7 @@ name:sampled-pork
 |:----------:|:------------------------|----------------------------------------------|------------------------------------------------------|
 | 陳啟昱	   |鑑於現行《所得稅法》第十 | Income tax; education expenses; deductions   | Special Deductions; Educational .ul.hi-grey[_Expenditure_]     |
 | 彭添富	   |針對「辦理九十四年原住民 | Aboriginal life                              |	housing .ul.hi-grey[_subsidies_]                     |
-| 李復興	   |發現自九十三年一月間起   | labor retirement .ul.hi-grey[_benefits_]     |	Retired employees .ul.hi-grey[_allowance_] for the elderly      |
+| 李復興	   |發現自九十三年一月間起   | labor retirement benefits                    |	Retired employees .ul.hi-grey[_allowance_] for the elderly      |
 | 盧秀燕	   |針對早期退除役軍官給與補 | Veterans welfare                             |	.ul.hi-grey[_Grants_] for early retired officers     |
 | 丁守中	   |針就民眾陳情指出，目前政 | Welfare for the handicapped                  |	Living .ul.hi-grey[_allowance_]                      |
 | 馮定國	   |鑒於國內經濟結構的快速   | Elderly .ul.hi-grey[_welfare_]               |	Aging; middle and old age unemployment               |
@@ -341,13 +334,13 @@ layout: true
 
 --
 
-- The reform  demonstrates heterogeneous effects on major parties vis-à-vis the minority parties  
+- The reform  demonstrates heterogeneous effects on manistream parties vis-à-vis small parties  
 
 --
 
 #### The Limitation:
 
-&gt; __Training Data__: The pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown/undeve concepts developed in the post-reform period. 
+&gt; __Training Data__: The pork barrel legislation from training data used in this paper has been nearly ten years. The deep learning classifier might fail to capture unknown concepts developed after the post-reform period. 
 
 --
 
@@ -372,8 +365,9 @@ name:appendix
 #### Supplementary
 
 .turquoise.smaller[
-[An Example of Parliamentary](#parliamentary-questions) | [The Number of Parliamentary Question](#num-pq) | [The Performance of the Models](#performance)
+[An Example of Parliamentary](#parliamentary-questions) | [The Number of Parliamentary Question](#num-pq) | [The Performance of the Models](#performance) | [Number of Train/ Test Sets](num-train-test)
 ]
+
 
 #### Embedding Types
 
@@ -410,6 +404,19 @@ name:one-hot-encoding
 
 
 &lt;img src="./images/onehot.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+layout: true
+# .tiny[Number of Train/ Test Sets]
+---
+name:num-train-test
+
+
+- The collection of this data set consists of .ul.hi-grey[_7243 pieces of legislation_] which were annotated as .ul.hi-grey[_Pork_] or .ul.hi-grey[_Non-Pork_].
+
+&lt;img src="./images/full_plot.png" width="55%" style="display: block; margin: auto;" /&gt;
 
 ---
 layout: true
