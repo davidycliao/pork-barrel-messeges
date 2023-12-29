@@ -1,6 +1,6 @@
 ---
 title: "Political Preferences for Pork Barrel Messages"
-subtitle: ".smallest.hi-slate[under Different Electoral Systemsl]"
+subtitle: ".smallest.hi-slate[under Different Electoral Systems]"
 author:
   - Yen-Chieh (David) Liao
   - .tiny[2023 APSA Annual Meeting]
