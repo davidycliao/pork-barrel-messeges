@@ -1,10 +1,10 @@
 ---
-title: "Electoral Reform and Pork Barrel"
-subtitle: ".smallest.hi-slate[in Parliamentary Questions]"
+title: "Political Preferences for Pork Barrel Messages"
+subtitle: ".smallest.hi-slate[under Different Electoral Systemsl]"
 author:
-  - David Yen-Chieh Liao
-  - .tiny[PhD Candidate at Department of Government in University of Essex]
-  - .tiny[Predoctoral Research Fellow at the Chair of Comparative Politices in University of Bamberg]
+  - Yen-Chieh (David) Liao
+  - .tiny[2023 APSA Annual Meeting]
+  - .tiny[Postdoc at University College Dublin]
 # date: .small[`r format(Sys.time(), '%d %B %Y')`]
 output:
   xaringan::moon_reader:
@@ -69,37 +69,43 @@ options(
     svg(tempfile(), width = width, height = height)
     })
 options(knitr.table.format = "html")
+
+# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/erpb/slides/electoral-reform-and-pork-barrel.html#1", verbose = FALSE)
+
+
+
 ```
 
 
 ```{python include=FALSE}
-# Built-in Library
-import math
-import re
-import collections
-import zipfile
-import random
-from itertools import chain
-import pandas as pd
-import numpy as np
-
-# ML & Deep Learning
-from sklearn.model_selection import train_test_split
-import tensorflow as tf
-from tensorflow.keras import layers
-import tensorflow_datasets as tfds
-from tensorflow.keras.callbacks import EarlyStopping,TensorBoard
-from transformers import BertTokenizer
-
-# NLP toolkit
-import spacy
-
-# Visualization
-import seaborn as sns
-import matplotlib.pyplot as plt
+# # Built-in Library
+# import math
+# import re
+# import collections
+# import zipfile
+# import random
+# from itertools import chain
+# import pandas as pd
+# import numpy as np
+# 
+# # ML & Deep Learning
+# from sklearn.model_selection import train_test_split
+# import tensorflow as tf
+# from tensorflow.keras import layers
+# import tensorflow_datasets as tfds
+# from tensorflow.keras.callbacks import EarlyStopping,TensorBoard
+# from transformers import BertTokenizer
+# 
+# # NLP toolkit
+# import spacy
+# 
+# # Visualization
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
 # Dimensional Deduction
-from sklearn.decomposition import PCA
+# from sklearn.decomposition import PCA
+
 ```
 
 
@@ -129,7 +135,7 @@ name:overview
 
 ---
 layout: true
-# .tiny[Why Parliarmentary Questions]
+# .tiny[Parliarmentary Questions]
 ---
 name:why-pq
 
@@ -358,7 +364,7 @@ name:sampled-non-pork
 
 ---
 layout: true
-# .tiny[Tentative Findings]
+# .tiny[Findings]
 ---
 name:parliarmentary-questions  
 
