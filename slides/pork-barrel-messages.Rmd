@@ -3,7 +3,7 @@ title: "Political Preferences for Pork Barrel Messages"
 subtitle: ".smallest.hi-slate[under Different Electoral Systems]"
 author:
   - Yen-Chieh (David) Liao
-  - .tiny[2023 ECPR Parliarment]
+  - .tiny[2023 APSA Annual Meeting at LA]
   - .tiny[Postdoc at University College Dublin]
 # date: .small[`r format(Sys.time(), '%d %B %Y')`]
 output:
@@ -31,8 +31,6 @@ p_load(
   parallel, future, furrr, future.apply, doParallel,                                                   # Paralleling
   devtools, reticulate, usethis                                                                        # programming
 )
-
-
 
 # Define colors
 red_pink   = "#e64173"
