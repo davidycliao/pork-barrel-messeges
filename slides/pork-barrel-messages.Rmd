@@ -70,7 +70,7 @@ options(
     })
 options(knitr.table.format = "html")
 
-# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/erpb/slides/electoral-reform-and-pork-barrel.html#1", verbose = FALSE)
+# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/pork-barrel-messeges/slides/pork-barrel-messages.html#1", verbose = FALSE)
 
 
 
